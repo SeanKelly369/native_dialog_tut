@@ -2,7 +2,10 @@
   <Label text="Home"></Label>
 </ActionBar>
 
-<GridLayout>
+<GridLayout rows="* *">
   <!-- Add your page content here -->
-  <Label text="Hello" class="text-lg text-center"></Label>
+  <Label row="0" text="Hello" class="text-lg text-center"></Label>
+  <StackLayout row="1">
+    <Button text="Open Away" (tap)="openAway()" class="primary-button"></Button>
+  </StackLayout>
 </GridLayout>
