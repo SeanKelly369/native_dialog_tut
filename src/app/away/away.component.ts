@@ -1,4 +1,4 @@
-import { Component, NO_ERRORS_SCHEMA, ViewContainerRef } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeDialogConfig, NativeDialog, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { ModalTest } from '../modal-test/modal-test.component';
 
@@ -11,17 +11,16 @@ import { ModalTest } from '../modal-test/modal-test.component';
 })
 export class AwayComponent {
 
-    constructor(private modal: NativeDialog, private vcRef: ViewContainerRef) {}
+    constructor(private modal: NativeDialog) {}
 
     openModal() {
         const modalOptions: NativeDialogConfig = {
-            data: {name: 'Sean', occupation: 'Code Monkey'},
-            viewContainerRef: this.vcRef,
+            data: {name: 'Sean', occupation: 'Software Developer'},
             nativeOptions: {
-                fullscreen: false,
-                animated: false,
+                fullscreen: true,
+                animated: true,
                 ios: {
-                    presentationStyle: UIModalPresentationStyle.BlurOverFullScreen
+                    presentationStyle: UIModalPresentationStyle.FullScreen
                 }
             }
         };

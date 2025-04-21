@@ -14,9 +14,11 @@ import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeSc
     dialogRef = inject(NativeDialogRef);
     modalData = inject(NATIVE_DIALOG_DATA);
 
+    constructor() {
+      console.log(this.modalData);
+    }
+
     close() {
-      const state = this.dialogRef.getState();
-      console.info(state)
       this.dialogRef.close('test');
     }
 
