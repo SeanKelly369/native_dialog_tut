@@ -1,5 +1,6 @@
-import { Component, inject, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Component, ElementRef, inject, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
+import { GridLayout } from '@nativescript/core';
 
 
 @Component({
@@ -20,6 +21,20 @@ import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeSc
 
     close() {
       this.dialogRef.close('test');
+    }
+
+    containerRef: GridLayout;
+    @ViewChild("container") set containerContent (elRef: ElementRef) {
+      if(elRef) {
+        this.containerRef = <GridLayout>elRef.nativeElement;
+        setTimeout( () => {
+            this.containerRef.animate({
+              opacity: 1,
+              duration: 350,
+              curve: 'easeIn'
+            });
+        }, 100);
+      }
     }
 
   }

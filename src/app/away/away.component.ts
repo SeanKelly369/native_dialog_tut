@@ -18,20 +18,16 @@ export class AwayComponent {
             data: {name: 'Sean', occupation: 'Software Developer'},
             nativeOptions: {
                 fullscreen: true,
-                animated: true,
+                animated: false,
                 ios: {
                     presentationStyle: UIModalPresentationStyle.FullScreen
                 }
             }
         };
-
         const ref = this.modal.open(ModalTest, modalOptions);
 
         ref.afterClosed().subscribe( (result) => {
             console.log(result);
         });
-
     }
-
-
 }
