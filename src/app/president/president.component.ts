@@ -1,17 +1,23 @@
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeDialogConfig, NativeDialog, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
-import { ModalTest } from '../modal-test/modal-test.component';
+import { PresidentModalComponent } from '../modals/president-modal/president-modal.component';
+import { PresidentModel } from '../interfaces/president-model';
 
 @Component({
-    selector: 'Away',
-    templateUrl: './away.component.html',
-    styleUrls: ['./away.component.scss', '../app.component.scss'],
+    selector: 'president',
+    templateUrl: './president.component.html',
+    styleUrls: ['./president.component.scss', '../app.component.scss'],
     imports: [NativeScriptCommonModule, NativeScriptRouterModule],
     schemas: [NO_ERRORS_SCHEMA]
 })
-export class AwayComponent {
+export class PresidentComponent {
 
-    constructor(private modal: NativeDialog) {}
+    @Input() item: PresidentModel;
+
+    constructor(private modal: NativeDialog) {
+        console.log('the item is:', this.item);
+
+    }
 
     openModal() {
         const modalOptions: NativeDialogConfig = {
@@ -24,10 +30,9 @@ export class AwayComponent {
                 }
             }
         };
-        const ref = this.modal.open(ModalTest, modalOptions);
+        const ref = this.modal.open(PresidentModalComponent, modalOptions);
 
         ref.afterClosed().subscribe( (result) => {
             console.log(result);
         });
-    }
-}
+    }}
