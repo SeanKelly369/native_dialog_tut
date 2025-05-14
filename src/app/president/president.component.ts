@@ -19,12 +19,12 @@ export class PresidentComponent {
 
     openModal() {
         const modalOptions: NativeDialogConfig = {
-            data: {name: 'Sean', occupation: 'Software Developer'},
+            data: this.president,
             nativeOptions: {
                 fullscreen: true,
                 animated: false,
                 ios: {
-                    presentationStyle: UIModalPresentationStyle.FullScreen
+                    presentationStyle: UIModalPresentationStyle.Custom
                 }
             }
         };

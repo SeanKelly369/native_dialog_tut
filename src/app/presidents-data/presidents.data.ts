@@ -279,18 +279,6 @@ export const PRESIDENTS: PresidentModel[] = [
   },
   {
     id: 24,
-    name: 'Grover Cleveland',
-    party: 'Democratic',
-    image: 'assets/images/presidents/Grover_Cleveland.jpg',
-    periodInOffice: ['1893–1897'],
-    description: 'Returned for a second term amidst economic depression.',
-    notableAchievements: [
-      'Handled the Panic of 1893 with strict adherence to the gold standard',
-      'Used federal troops to break the Pullman Strike',
-    ],
-  },
-  {
-    id: 25,
     name: 'William McKinley',
     party: 'Republican',
     image: 'assets/images/presidents/William_McKinley.jpg',
@@ -302,7 +290,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 26,
+    id: 25,
     name: 'Theodore Roosevelt',
     party: 'Republican',
     image: 'assets/images/presidents/Theodore_Roosevelt.jpg',
@@ -315,7 +303,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 27,
+    id: 26,
     name: 'William Howard Taft',
     party: 'Republican',
     image: 'assets/images/presidents/William_H_Taft.jpg',
@@ -327,7 +315,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 28,
+    id: 27,
     name: 'Woodrow Wilson',
     party: 'Democratic',
     image: 'assets/images/presidents/Woodrow_Wilson.jpg',
@@ -340,7 +328,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 29,
+    id: 28,
     name: 'Warren G. Harding',
     party: 'Republican',
     image: 'assets/images/presidents/Warren_G_Harding.jpg',
@@ -352,7 +340,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 30,
+    id: 29,
     name: 'Calvin Coolidge',
     party: 'Republican',
     image: 'assets/images/presidents/Calvin_Coolidge.jpg',
@@ -364,7 +352,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 31,
+    id: 30,
     name: 'Herbert Hoover',
     party: 'Republican',
     image: 'assets/images/presidents/Herbert_Hoover.jpg',
@@ -376,7 +364,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 32,
+    id: 31,
     name: 'Franklin D. Roosevelt',
     party: 'Democratic',
     image: 'assets/images/presidents/Franklin_D_Roosevelt.jpg',
@@ -389,10 +377,10 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 33,
+    id: 32,
     name: 'Harry S. Truman',
     party: 'Democratic',
-    image: 'assets/images/presidents/Harry_S_Truman.jpg',
+    image: 'assets/images/presidents/Harry_Truman.jpg',
     periodInOffice: ['1945–1953'],
     description: 'Authorized the atomic bomb and led early Cold War policies.',
     notableAchievements: [
@@ -402,7 +390,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 34,
+    id: 33,
     name: 'Dwight D. Eisenhower',
     party: 'Republican',
     image: 'assets/images/presidents/Dwight_D_Eisenhower.jpg',
@@ -415,7 +403,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 35,
+    id: 34,
     name: 'John F. Kennedy',
     party: 'Democratic',
     image: 'assets/images/presidents/John_F_Kennedy.jpg',
@@ -428,7 +416,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 36,
+    id: 35,
     name: 'Lyndon B. Johnson',
     party: 'Democratic',
     image: 'assets/images/presidents/Lyndon_B_Johnson.jpg',
@@ -441,7 +429,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 37,
+    id: 36,
     name: 'Richard Nixon',
     party: 'Republican',
     image: 'assets/images/presidents/Richard_Nixon.jpg',
@@ -454,7 +442,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 38,
+    id: 37,
     name: 'Gerald Ford',
     party: 'Republican',
     image: 'assets/images/presidents/Gerald_Ford.jpg',
@@ -466,7 +454,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 39,
+    id: 38,
     name: 'Jimmy Carter',
     party: 'Democratic',
     image: 'assets/images/presidents/Jimmy_Carter.jpg',
@@ -479,7 +467,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 40,
+    id: 39,
     name: 'Ronald Reagan',
     party: 'Republican',
     image: 'assets/images/presidents/Ronald_Reagan.jpg',
@@ -492,7 +480,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 41,
+    id: 40,
     name: 'George H. W. Bush',
     party: 'Republican',
     image: 'assets/images/presidents/Herbert_Walker_Bush.jpg',
@@ -505,7 +493,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 42,
+    id: 41,
     name: 'Bill Clinton',
     party: 'Democratic',
     image: 'assets/images/presidents/Bill_Clinton.jpg',
@@ -518,7 +506,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 43,
+    id: 42,
     name: 'George W. Bush',
     party: 'Republican',
     image: 'assets/images/presidents/George_W_Bush.jpg',
@@ -531,7 +519,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 44,
+    id: 43,
     name: 'Barack Obama',
     party: 'Democratic',
     image: 'assets/images/presidents/Barack_Obama.jpg',
@@ -544,11 +532,11 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 45,
+    id: 44,
     name: 'Donald J. Trump',
     party: 'Republican',
     image: 'assets/images/presidents/Donald_Trump.jpg',
-    periodInOffice: ['2017–2021'],
+    periodInOffice: ['2017–2021', '2025-present'],
     description: 'Businessman and TV personality who ran a populist, anti-establishment campaign.',
     notableAchievements: [
       'Passed major tax reform in 2017',
@@ -558,7 +546,7 @@ export const PRESIDENTS: PresidentModel[] = [
     ],
   },
   {
-    id: 46,
+    id: 45,
     name: 'Joe Biden',
     party: 'Democratic',
     image: 'assets/images/presidents/Joe_Biden.jpg',

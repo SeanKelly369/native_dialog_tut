@@ -1,12 +1,12 @@
-import { Component, ElementRef, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { appRoutePaths } from '../app.routes.names';
 import { NativeScriptCommonModule, NativeScriptRouterModule, RouterExtensions } from '@nativescript/angular';
 import { PresidentModel } from '../interfaces/president-model';
 import { PRESIDENTS } from '../presidents-data/presidents.data';
-import { CollectionView } from '@nstudio/ui-collectionview';
-import { ObservableArray } from '@nativescript/core';
+import { EventData, ObservableArray } from '@nativescript/core';
 import { PresidentComponent } from '../president/president.component';
 import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
+import { CollectionView } from '@nstudio/ui-collectionview';
 
 
 @Component({
@@ -20,13 +20,6 @@ import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
 
   presidents: ObservableArray<PresidentModel> = new ObservableArray();
 
-  presidentsList: CollectionView;
-  @ViewChild("presidentsList") set presidentsListContent (presidentsListRef: ElementRef) {
-    if(presidentsListRef) {
-      this.presidentsList = <CollectionView>presidentsListRef.nativeElement;
-    }
-  }
-
   constructor(private router: RouterExtensions) {
     this.presidents = new ObservableArray(PRESIDENTS);
   }
@@ -37,5 +30,14 @@ import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
 
   onItemTap(args): void {
     const president = this.presidents[args.index];
+  }
+
+    doLoadedRemoveBandingAnimation(data: EventData): void {
+    const collectionView = <CollectionView>data.object;
+    if(global.isAndroid) {
+      collectionView.android.setOverScrollMode(android.view.View.OVER_SCROLL_NEVER);
+    } else {
+      collectionView.ios.bounces = false;
+    }
   }
 }
