@@ -1,5 +1,24 @@
-<GridLayout>
-    <StackLayout class="button-container">
-        <Button (tap)="openModal()" text="Open Modal Here" class="primary-button"></Button>
+<GridLayout class="president-container" columns="* 2*" rows="* * * *">
+    <StackLayout row="0" col="0">
+        <Label text="Name"></Label>
+    </StackLayout>
+    <StackLayout row="0" col="1">
+        <Label [text]="president.name"></Label>
+    </StackLayout>
+
+    <!-- Portrait -->
+    <StackLayout row="1" colspan="2" width="100%" backgroundColor="red">
+        <Image src="~/{{president.image}}"></Image>
+    </StackLayout>
+
+    <!-- Party -->
+    <StackLayout row="2" col="0">
+        <Label text="Party"></Label>
+    </StackLayout>
+    <StackLayout row="2" col="1">
+        <Label [text]="president.party"></Label>
+    </StackLayout>
+    <StackLayout row="3" colspan="2" class="button-container">
+        <Button (tap)="openModal()" text="More Details" class="primary-button"></Button>
     </StackLayout>
 </GridLayout>

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, inject, Input, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { GridLayout } from '@nativescript/core';
+import { PresidentModel } from '~/app/interfaces/president-model';
 
 @Component({
     selector: 'president-modal',
@@ -15,8 +16,7 @@ import { GridLayout } from '@nativescript/core';
     dialogRef = inject(NativeDialogRef);
     modalData = inject(NATIVE_DIALOG_DATA);
 
-    constructor() {
-    }
+    constructor() {}
 ß
     close() {
       this.dialogRef.close('test');

@@ -4,7 +4,6 @@ import { NativeScriptCommonModule, NativeScriptRouterModule, RouterExtensions } 
 import { PresidentModel } from '../interfaces/president-model';
 import { PRESIDENTS } from '../presidents-data/presidents.data';
 import { CollectionView } from '@nstudio/ui-collectionview';
-import { PresidentModalComponent } from '../modals/president-modal/president-modal.component';
 import { ObservableArray } from '@nativescript/core';
 import { PresidentComponent } from '../president/president.component';
 import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
@@ -14,7 +13,7 @@ import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
   selector: 'Main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss', '../app.component.scss'],
-  imports: [NativeScriptCommonModule, NativeScriptRouterModule, CollectionViewModule],
+  imports: [NativeScriptCommonModule, NativeScriptRouterModule, CollectionViewModule, PresidentComponent],
   schemas: [NO_ERRORS_SCHEMA],
   standalone: true
 })export class MainComponent {
@@ -25,22 +24,18 @@ import { CollectionViewModule } from '@nstudio/ui-collectionview/angular';
   @ViewChild("presidentsList") set presidentsListContent (presidentsListRef: ElementRef) {
     if(presidentsListRef) {
       this.presidentsList = <CollectionView>presidentsListRef.nativeElement;
-      // console.log(this.presidentsList);
     }
   }
 
   constructor(private router: RouterExtensions) {
-    setTimeout(() => {
-      this.presidents = new ObservableArray(PRESIDENTS);
-    }, 75);
+    this.presidents = new ObservableArray(PRESIDENTS);
   }
 
-  openAway() {
+  openAway(): void {
     this.router.navigate([appRoutePaths.AWAY_PAGE]);
   }
 
-  onItemTap(args) {
+  onItemTap(args): void {
     const president = this.presidents[args.index];
-    console.log(president);
   }
 }

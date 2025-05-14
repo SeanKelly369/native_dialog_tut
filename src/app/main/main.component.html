@@ -2,8 +2,7 @@
   <Label text="Presidents"></Label>
 </ActionBar>
 
-<GridLayout backgroundColor="green" rows="auto,*">
-  <Label text="bee" row="0"></Label>
+<GridLayout>
 
   <CollectionView
     #presidentsList
@@ -11,14 +10,12 @@
     [items]="presidents"
     isAnimationEnabled="false"
     (itemTap)="onItemTap($event)"
-    backgroundColor="red"
     width="100%"
-    height="300"
     >
 
     <ng-template let-item="item" let-i="index">
-      <StackLayout height="40" backgroundColor="blue">
-        <Label [text]="item.name"></Label>
+      <StackLayout>
+         <president [president]="item"></president>
       </StackLayout>
     </ng-template>
 

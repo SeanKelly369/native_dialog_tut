@@ -12,11 +12,9 @@ import { PresidentModel } from '../interfaces/president-model';
 })
 export class PresidentComponent {
 
-    @Input() item: PresidentModel;
+    @Input() president: PresidentModel;
 
     constructor(private modal: NativeDialog) {
-        console.log('the item is:', this.item);
-
     }
 
     openModal() {
