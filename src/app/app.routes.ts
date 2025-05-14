@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AwayComponent } from './away/away.component'
+import { PresidentComponent } from './president/president.component'
 
 export const routes: Routes = [
   {
@@ -10,12 +10,12 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () => import('./home/home.component')
-      .then(m => m.HomeComponent)
+    loadComponent: () => import('./main/main.component')
+      .then(m => m.MainComponent)
   },
   {
-    path: 'away',
-    component: AwayComponent,
-    data: { title: 'Away' }
+    path: 'president',
+    component: PresidentComponent,
+    data: { title: 'President' }
   }
 ];

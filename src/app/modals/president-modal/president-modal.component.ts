@@ -1,23 +1,21 @@
-import { Component, ElementRef, inject, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { GridLayout } from '@nativescript/core';
 
-
 @Component({
-    selector: 'Home',
-    templateUrl: './modal-test.component.html',
-    styleUrls: ['./modal-test.component.scss', '../app.component.scss'],
+    selector: 'president-modal',
+    templateUrl: './president-modal.component.html',
+    styleUrls: ['./president-modal.component.scss', '../../app.component.scss'],
     imports: [NativeScriptCommonModule, NativeScriptRouterModule],
-    schemas: [NO_ERRORS_SCHEMA]
+    schemas: [NO_ERRORS_SCHEMA],
+    changeDetection: ChangeDetectionStrategy.OnPush
   })
-  export class ModalTest{
+  export class PresidentModalComponent{
 
     dialogRef = inject(NativeDialogRef);
-    modalData = inject(NATIVE_DIALOG_DATA);
+    president = inject(NATIVE_DIALOG_DATA);
 
-    constructor() {
-      console.log(this.modalData);
-    }
+    constructor() {}
 
     close() {
       this.dialogRef.close('test');

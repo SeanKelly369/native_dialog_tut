@@ -1,0 +1,24 @@
+<ActionBar>
+  <Label text="Presidents"></Label>
+</ActionBar>
+
+<GridLayout>
+
+  <CollectionView
+    [items]="presidents"
+    isAnimationEnabled="false"
+    (loaded)="doLoadedRemoveBandingAnimation($event)"
+    (itemTap)="onItemTap($event)"
+    width="100%"
+    >
+
+    <ng-template let-item="item" let-i="index">
+      <GridLayout width="50%" padding="5">
+        <president [president]="item"></president>
+      </GridLayout>
+    </ng-template>
+
+  </CollectionView>
+</GridLayout>
+
+

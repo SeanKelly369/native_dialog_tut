@@ -1,0 +1,22 @@
+<GridLayout class="modal-root">
+    <GridLayout #container class="modal-container" rows="* auto auto auto auto auto">
+        <StackLayout row="0" class="modal-header">
+            <Label [text]="president.name" class="modal-title"></Label>
+        </StackLayout>
+        <StackLayout row="1">
+            <Label [text]="president.party"></Label>
+        </StackLayout>
+        <StackLayout row="2">
+            <Label [text]="president.periodInOffice"></Label>
+        </StackLayout>
+        <StackLayout row="3">
+            <Label [text]="president.description" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout row="4">
+            <Label [text]="president.notableAchievements" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout row="5" class="button-container" marginTop="12">>
+            <Button text="close modal" class="primary-button" (tap)="close()"></Button>
+        </StackLayout>
+    </GridLayout>
+</GridLayout>
