@@ -1,6 +1,5 @@
 import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { appRoutePaths } from '../app.routes.names';
-import { NativeScriptCommonModule, NativeScriptRouterModule, RouterExtensions } from '@nativescript/angular';
+import { NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { PresidentModel } from '../interfaces/president-model';
 import { PRESIDENTS } from '../presidents-data/presidents.data';
 import { EventData, ObservableArray } from '@nativescript/core';
@@ -20,12 +19,8 @@ import { CollectionView } from '@nstudio/ui-collectionview';
 
   presidents: ObservableArray<PresidentModel> = new ObservableArray();
 
-  constructor(private router: RouterExtensions) {
+  constructor() {
     this.presidents = new ObservableArray(PRESIDENTS);
-  }
-
-  openAway(): void {
-    this.router.navigate([appRoutePaths.AWAY_PAGE]);
   }
 
   onItemTap(args): void {

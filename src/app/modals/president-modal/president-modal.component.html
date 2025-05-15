@@ -1,19 +1,26 @@
 <GridLayout class="modal-root">
-    <GridLayout #container class="modal-container" rows="* auto auto auto auto auto">
+    <GridLayout *ngIf="isIos" class="modal-outer-area" (tap)="close()"></GridLayout>
+
+    <GridLayout #container class="modal-container" rows="* auto auto auto auto auto" (tap)="noop()" ios:width="80%" android:width="100%">
         <StackLayout row="0" class="modal-header">
-            <Label [text]="president.name" class="modal-title"></Label>
+            <Label [text]="president.name" class="section-title"></Label>
         </StackLayout>
-        <StackLayout row="1">
-            <Label [text]="president.party"></Label>
-        </StackLayout>
-        <StackLayout row="2">
+        <GridLayout row="1" columns="auto *">
+            <Label text="Party:" marginLeft="14"></Label>
+            <Label col="1" [text]="president.party"></Label>
+        </GridLayout>
+        <GridLayout row="2">
+            <Label></Label>
             <Label [text]="president.periodInOffice"></Label>
-        </StackLayout>
+        </GridLayout>
         <StackLayout row="3">
             <Label [text]="president.description" textWrap="true"></Label>
         </StackLayout>
         <StackLayout row="4">
-            <Label [text]="president.notableAchievements" textWrap="true"></Label>
+            <Label text="Notable Achievements:" class="section-title"></Label>
+            <StackLayout *ngFor="let achievement of president.notableAchievements" orientation="horizontal" class="achievement-text">
+                <Label [text]="achievement" textWrap="true"></Label>
+            </StackLayout>
         </StackLayout>
         <StackLayout row="5" class="button-container" marginTop="12">>
             <Button text="close modal" class="primary-button" (tap)="close()"></Button>

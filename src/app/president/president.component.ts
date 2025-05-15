@@ -21,7 +21,7 @@ export class PresidentComponent {
         const modalOptions: NativeDialogConfig = {
             data: this.president,
             nativeOptions: {
-                fullscreen: true,
+                fullscreen: false,
                 animated: false,
                 ios: {
                     presentationStyle: UIModalPresentationStyle.Custom

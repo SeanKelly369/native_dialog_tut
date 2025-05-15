@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ElementRef, inject, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { GridLayout } from '@nativescript/core';
+import { isIOS } from "@nativescript/core/platform";
 
 @Component({
     selector: 'president-modal',
@@ -14,8 +15,13 @@ import { GridLayout } from '@nativescript/core';
 
     dialogRef = inject(NativeDialogRef);
     president = inject(NATIVE_DIALOG_DATA);
+    isIos: boolean = false;
 
-    constructor() {}
+    constructor() {
+      if(isIOS) {
+        this.isIos = true;
+      }
+    }
 
     close() {
       this.dialogRef.close('test');
@@ -35,4 +41,11 @@ import { GridLayout } from '@nativescript/core';
       }
     }
 
+  onInnerTouch(event: any): void {
+    event.cancel = true; // Prevent bubbling to outer layout
   }
+
+  noop() {
+
+  }
+}
