@@ -5,16 +5,10 @@ import {
   provideNativeScriptRouter,
   runNativeScriptAngularApp,
 } from '@nativescript/angular';
-import { provideExperimentalZonelessChangeDetection } from '@angular/core';
+
 import { withInterceptorsFromDi } from '@angular/common/http';
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-
-/**
- * Disable zone by setting this to true
- * Then also adjust polyfills.ts (see note there)
- */
-const EXPERIMENTAL_ZONELESS = false;
 
 runNativeScriptAngularApp({
   appModuleBootstrap: () => {
@@ -22,9 +16,7 @@ runNativeScriptAngularApp({
       providers: [
         provideNativeScriptHttpClient(withInterceptorsFromDi()),
         provideNativeScriptRouter(routes),
-        EXPERIMENTAL_ZONELESS
-          ? provideExperimentalZonelessChangeDetection()
-          : provideNativeScriptNgZone(),
+        provideNativeScriptNgZone(), // keep this for NativeScript compatibility
       ],
     });
   },
