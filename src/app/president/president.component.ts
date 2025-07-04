@@ -1,4 +1,4 @@
-import { Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeDialogConfig, NativeDialog, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { PresidentModalComponent } from '../modals/president-modal/president-modal.component';
 import { PresidentModel } from '../interfaces/president-model';
@@ -8,7 +8,8 @@ import { PresidentModel } from '../interfaces/president-model';
     templateUrl: './president.component.html',
     styleUrls: ['./president.component.scss', '../app.component.scss'],
     imports: [NativeScriptCommonModule, NativeScriptRouterModule],
-    schemas: [NO_ERRORS_SCHEMA]
+    schemas: [NO_ERRORS_SCHEMA],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PresidentComponent {
 
@@ -21,7 +22,7 @@ export class PresidentComponent {
         const modalOptions: NativeDialogConfig = {
             data: this.president,
             nativeOptions: {
-                fullscreen: true,
+                fullscreen: false,
                 animated: false,
                 ios: {
                     presentationStyle: UIModalPresentationStyle.Custom
