@@ -1,13 +1,13 @@
-<GridLayout class="president-container" columns="*" rows="* * *" ios:width="100%" android:width="40%">
+<GridLayout columns="*" rows="* auto auto">
 
     <!-- Portrait -->
-    <StackLayout row="0" colspan="2" width="100%">
+    <StackLayout row="0" width="100%">
         <Image src="~/{{president.image}}"></Image>
     </StackLayout>
 
     <!-- Name -->
     <StackLayout row="1" col="1" horizontalAlignment="center">
-        <Label [text]="president.name"></Label>
+        <Label class="president-name" [text]="president.name"></Label>
     </StackLayout>
 
     <StackLayout row="2" colspan="2" class="button-container" marginTop="3" marginBottom="8">

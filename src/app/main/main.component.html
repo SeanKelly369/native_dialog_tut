@@ -1,24 +1,17 @@
 <ActionBar>
-  <Label text="Presidents"></Label>
+  <Label text="Presidents" android:fontSize="20" android:fontWeight="400" android:color="black"></Label>
 </ActionBar>
 
-<GridLayout>
 
-  <CollectionView
-    [items]="presidents"
-    isAnimationEnabled="false"
-    (loaded)="doLoadedRemoveBandingAnimation($event)"
-    (itemTap)="onItemTap($event)"
-    width="100%"
-    >
+  <ScrollView (loaded)="doLoadedRemoveBandingAnimation($event)">
+    <FlexboxLayout flexDirection="row" flexWrap="wrap" justifyContent="flex-start">
+      <ng-container *ngFor="let president of presidents">
+        <StackLayout width="50%" padding="4">
+          <president [president]="president"></president>
+        </StackLayout>
+      </ng-container>
+    </FlexboxLayout>
+  </ScrollView>
 
-    <ng-template let-item="item" let-i="index">
-      <GridLayout width="50%" padding="5">
-        <president [president]="item"></president>
-      </GridLayout>
-    </ng-template>
-
-  </CollectionView>
-</GridLayout>
 
 
