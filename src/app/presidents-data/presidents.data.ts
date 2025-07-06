@@ -12,6 +12,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Led the Continental Army to victory in the American Revolutionary War',
       'Presided over the Constitutional Convention of 1787',
     ],
+    isSeen: false
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Played a leading role in advocating for independence',
       'Helped draft the Declaration of Independence',
     ],
+    isSeen: false
   },
   {
     id: 3,
@@ -36,6 +38,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Completed the Louisiana Purchase',
       'Commissioned the Lewis and Clark Expedition',
     ],
+    isSeen: false
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Led the nation during the War of 1812',
       'Co-authored the Federalist Papers',
     ],
+    isSeen: false
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Issued the Monroe Doctrine',
       'Acquired Florida from Spain',
     ],
+    isSeen: false
   },
   {
     id: 6,
@@ -72,6 +77,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Negotiated the Treaty of Ghent to end the War of 1812',
       'Advocated for internal improvements and a national university',
     ],
+    isSeen: false
   },
   {
     id: 7,
@@ -84,6 +90,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Implemented the Indian Removal Act leading to the Trail of Tears',
       'Vetoed the recharter of the Second Bank of the United States',
     ],
+    isSeen: false
   },
   {
     id: 8,
@@ -96,6 +103,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Faced the Panic of 1837, a major economic crisis',
       'Maintained a policy of neutrality in foreign affairs',
     ],
+    isSeen: false
   },
   {
     id: 9,
@@ -108,6 +116,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Delivered the longest inaugural address in U.S. history',
       'First president to die in office, prompting constitutional questions about succession',
     ],
+    isSeen: false
   },
   {
     id: 10,
@@ -120,6 +129,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Annexed Texas into the United States',
       'Faced opposition from his own party, leading to his expulsion from the Whig Party',
     ],
+    isSeen: false
   },
   {
     id: 11,
@@ -132,6 +142,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Oversaw the Oregon Territory settlement',
       'Led the nation during the Mexican-American War, acquiring California and much of the Southwest',
     ],
+    isSeen: false
   },
   {
     id: 12,
@@ -144,6 +155,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Took a moderate stance on slavery, angering Southern politicians',
       'Died 16 months into his term, leading to Millard Fillmore’s presidency',
     ],
+    isSeen: false
   },
   {
     id: 13,
@@ -156,6 +168,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Signed the Compromise of 1850, including the Fugitive Slave Act',
       'Opened trade relations with Japan through Commodore Perry’s expedition',
     ],
+    isSeen: false
   },
   {
     id: 14,
@@ -168,6 +181,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Signed the Kansas-Nebraska Act, leading to violent conflict over slavery',
       'Supported the Gadsden Purchase, facilitating southern transcontinental railroad',
     ],
+    isSeen: false
   },
   {
     id: 15,
@@ -180,6 +194,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Did not prevent the secession of Southern states',
       'Supported the Dred Scott decision, inflaming abolitionist sentiment',
     ],
+    isSeen: false
   },
     {
     id: 16,
@@ -192,6 +207,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Issued the Emancipation Proclamation',
       'Preserved the Union during the American Civil War',
     ],
+    isSeen: false
   },
   {
     id: 17,
@@ -204,6 +220,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'First U.S. president to be impeached (but acquitted by the Senate)',
       'Vetoed civil rights legislation, clashing with Congress',
     ],
+    isSeen: false
   },
   {
     id: 18,
@@ -216,6 +233,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Promoted civil rights and worked to suppress the Ku Klux Klan',
       'Faced numerous corruption scandals within his administration',
     ],
+    isSeen: false
   },
   {
     id: 19,
@@ -228,6 +246,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Withdrew federal troops from the South as part of the Compromise of 1877',
       'Promoted civil service reform',
     ],
+    isSeen: false
   },
   {
     id: 20,
@@ -240,6 +259,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Fought corruption in the Post Office',
       'Assassinated by a disgruntled office seeker, highlighting the need for civil service reform',
     ],
+    isSeen: false
   },
   {
     id: 21,
@@ -252,6 +272,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Signed the Pendleton Civil Service Reform Act',
       'Modernized the U.S. Navy',
     ],
+    isSeen: false
   },
   {
     id: 22,
@@ -264,6 +285,7 @@ export const PRESIDENTS: PresidentModel[] = [
       'Fought corruption and vetoed many private pension bills',
       'Supported the gold standard and limited government',
     ],
+    isSeen: false
   },
   {
     id: 23,
@@ -274,8 +296,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Grandson of William Henry Harrison; supported economic modernization.',
     notableAchievements: [
       'Signed the Sherman Antitrust Act',
-      'Facilitated the admission of six new western states',
+      'Facilitated the admission of six new western states'
     ],
+    isSeen: false
   },
   {
     id: 24,
@@ -286,8 +309,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Led the nation to victory in the Spanish-American War.',
     notableAchievements: [
       'Annexed the Philippines, Guam, and Puerto Rico',
-      'Assassinated early in his second term, elevating Theodore Roosevelt',
+      'Assassinated early in his second term, elevating Theodore Roosevelt'
     ],
+    isSeen: false
   },
   {
     id: 25,
@@ -299,8 +323,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Built the Panama Canal',
       'Broke up monopolies and protected national parks',
-      'Won the Nobel Peace Prize for mediating the Russo-Japanese War',
+      'Won the Nobel Peace Prize for mediating the Russo-Japanese War'
     ],
+    isSeen: false
   },
   {
     id: 26,
@@ -311,8 +336,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Only person to serve as both U.S. president and Chief Justice of the Supreme Court.',
     notableAchievements: [
       'Expanded antitrust prosecutions beyond Roosevelt’s efforts',
-      'Strengthened the Interstate Commerce Commission',
+      'Strengthened the Interstate Commerce Commission'
     ],
+    isSeen: false
   },
   {
     id: 27,
@@ -324,8 +350,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Established the Federal Reserve and Federal Trade Commission',
       'Issued the Fourteen Points peace plan',
-      'Won the Nobel Peace Prize',
+      'Won the Nobel Peace Prize'
     ],
+    isSeen: false
   },
   {
     id: 28,
@@ -336,8 +363,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Promised a “return to normalcy” after World War I.',
     notableAchievements: [
       'Signed the Budget and Accounting Act of 1921',
-      'Administration plagued by scandals, including Teapot Dome',
+      'Administration plagued by scandals, including Teapot Dome'
     ],
+    isSeen: false
   },
   {
     id: 29,
@@ -348,8 +376,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Known for his quiet demeanor and pro-business policies during the Roaring Twenties.',
     notableAchievements: [
       'Reduced federal debt and taxes',
-      'Supported civil rights for African Americans and Native Americans',
+      'Supported civil rights for African Americans and Native Americans'
     ],
+    isSeen: false
   },
   {
     id: 30,
@@ -360,8 +389,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'President during the onset of the Great Depression.',
     notableAchievements: [
       'Oversaw response to the 1929 stock market crash',
-      'Built the Hoover Dam project',
+      'Built the Hoover Dam project'
     ],
+    isSeen: false
   },
   {
     id: 31,
@@ -373,8 +403,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Created the New Deal to combat economic collapse',
       'Guided the U.S. during World War II',
-      'Established Social Security',
+      'Established Social Security'
     ],
+    isSeen: false
   },
   {
     id: 32,
@@ -386,8 +417,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Implemented the Marshall Plan to rebuild Europe',
       'Desegregated the U.S. military',
-      'Led the U.S. into the Korean War',
+      'Led the U.S. into the Korean War'
     ],
+    isSeen: false
   },
   {
     id: 33,
@@ -399,8 +431,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Launched the Interstate Highway System',
       'Enforced school desegregation in Little Rock',
-      'Warned of the “military-industrial complex” in his farewell address',
+      'Warned of the “military-industrial complex” in his farewell address'
     ],
+    isSeen: false
   },
   {
     id: 34,
@@ -412,8 +445,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Managed the Cuban Missile Crisis',
       'Started the Apollo space program',
-      'Called for civil rights legislation before his assassination',
+      'Called for civil rights legislation before his assassination'
     ],
+    isSeen: false
   },
   {
     id: 35,
@@ -425,8 +459,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Signed the Civil Rights Act of 1964 and Voting Rights Act of 1965',
       'Launched the “Great Society” anti-poverty programs',
-      'Escalated U.S. involvement in the Vietnam War',
+      'Escalated U.S. involvement in the Vietnam War'
     ],
+    isSeen: false
   },
   {
     id: 36,
@@ -438,8 +473,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Opened diplomatic relations with China',
       'Ended U.S. involvement in Vietnam',
-      'Created the Environmental Protection Agency (EPA)',
+      'Created the Environmental Protection Agency (EPA)'
     ],
+    isSeen: false
   },
   {
     id: 37,
@@ -450,8 +486,9 @@ export const PRESIDENTS: PresidentModel[] = [
     description: 'Took office after Nixon’s resignation; never elected president or vice president.',
     notableAchievements: [
       'Pardoned Richard Nixon',
-      'Presided over economic challenges like inflation and recession',
+      'Presided over economic challenges like inflation and recession'
     ],
+    isSeen: false
   },
   {
     id: 38,
@@ -463,8 +500,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Brokered the Camp David Accords between Egypt and Israel',
       'Faced the Iran Hostage Crisis and energy crisis',
-      'Won the Nobel Peace Prize in 2002',
+      'Won the Nobel Peace Prize in 2002'
     ],
+    isSeen: false
   },
   {
     id: 39,
@@ -476,8 +514,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Implemented Reaganomics to stimulate economic growth',
       'Played a key role in ending the Cold War',
-      'Survived an assassination attempt in 1981',
+      'Survived an assassination attempt in 1981'
     ],
+    isSeen: false
   },
   {
     id: 40,
@@ -489,8 +528,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Led Operation Desert Storm against Iraq',
       'Signed the Americans with Disabilities Act',
-      'Managed the collapse of the Soviet Union',
+      'Managed the collapse of the Soviet Union'
     ],
+    isSeen: false
   },
   {
     id: 41,
@@ -502,8 +542,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Enacted welfare reform and balanced the federal budget',
       'Signed NAFTA into law',
-      'Impeached by the House but acquitted by the Senate',
+      'Impeached by the House but acquitted by the Senate'
     ],
+    isSeen: false
   },
   {
     id: 42,
@@ -515,8 +556,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Launched the wars in Afghanistan and Iraq',
       'Created the Department of Homeland Security',
-      'Passed No Child Left Behind education reform',
+      'Passed No Child Left Behind education reform'
     ],
+    isSeen: false
   },
   {
     id: 43,
@@ -528,8 +570,9 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Signed the Affordable Care Act (Obamacare)',
       'Ordered the operation that killed Osama bin Laden',
-      'Won the Nobel Peace Prize in 2009',
+      'Won the Nobel Peace Prize in 2009'
     ],
+    isSeen: false
   },
   {
     id: 44,
@@ -542,8 +585,9 @@ export const PRESIDENTS: PresidentModel[] = [
       'Passed major tax reform in 2017',
       'Appointed three Supreme Court justices',
       'Facilitated the Abraham Accords in the Middle East',
-      'Impeached twice — acquitted both times',
+      'Impeached twice — acquitted both times'
     ],
+    isSeen: false
   },
   {
     id: 45,
@@ -555,7 +599,8 @@ export const PRESIDENTS: PresidentModel[] = [
     notableAchievements: [
       'Passed the American Rescue Plan for COVID-19 relief',
       'Signed the Inflation Reduction Act',
-      'Oversaw U.S. withdrawal from Afghanistan',
+      'Oversaw U.S. withdrawal from Afghanistan'
     ],
+    isSeen: false
   },
 ];

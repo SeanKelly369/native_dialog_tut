@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, inject, NO_ERRORS_SCHEM
 import { NATIVE_DIALOG_DATA, NativeDialogRef, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { GridLayout } from '@nativescript/core';
 import { isIOS } from "@nativescript/core/platform";
+import { PresidentModel } from '~/app/interfaces/president-model';
 
 @Component({
   selector: 'president-modal',
@@ -14,7 +15,7 @@ import { isIOS } from "@nativescript/core/platform";
 export class PresidentModalComponent {
 
   dialogRef = inject(NativeDialogRef);
-  president = inject(NATIVE_DIALOG_DATA);
+  president = <PresidentModel>inject(NATIVE_DIALOG_DATA);
   isIos: boolean = false;
 
   constructor() {
@@ -24,7 +25,7 @@ export class PresidentModalComponent {
   }
 
   close(): void {
-    this.dialogRef.close('test');
+    this.dialogRef.close(true);
   }
 
   containerRef: GridLayout;
