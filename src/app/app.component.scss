@@ -10,3 +10,13 @@
     horizontal-align: center;
     vertical-align: middle;
 }
+
+Button {
+  height: 40;
+  min-height: 40;
+  padding: 8 16;
+  font-size: 16;
+  border-radius: 8;
+  color: white;
+  text-transform: none;
+}

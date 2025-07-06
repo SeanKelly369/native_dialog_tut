@@ -11,6 +11,12 @@
     </StackLayout>
 
     <StackLayout row="2" colspan="2" class="button-container" marginTop="3" marginBottom="8">
-        <Button (tap)="openModal()" text="More Details" class="primary-button"></Button>
+        <Button
+            class="primary-button"
+            (tap)="openModal()"
+            text="More Details"
+            [ngStyle]="{'backgroundColor': this.president.isSeen === true ? 'rgb(211, 23, 14)' : 'rgb(21, 23, 143)' }"
+        >
+        </Button>
     </StackLayout>
 </GridLayout>

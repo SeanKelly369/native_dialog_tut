@@ -6,4 +6,5 @@ export interface PresidentModel {
     periodInOffice: string[];
     description: string;
     notableAchievements: string[];
+    isSeen: boolean;
 }

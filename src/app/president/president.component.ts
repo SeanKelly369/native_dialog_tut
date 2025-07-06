@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeDialogConfig, NativeDialog, NativeScriptCommonModule, NativeScriptRouterModule } from '@nativescript/angular';
 import { PresidentModalComponent } from '../modals/president-modal/president-modal.component';
 import { PresidentModel } from '../interfaces/president-model';
@@ -15,8 +15,10 @@ export class PresidentComponent {
 
     @Input() president: PresidentModel;
 
-    constructor(private modal: NativeDialog) {
-    }
+    constructor(
+        private readonly modal: NativeDialog,
+        private readonly changeDetectorRef: ChangeDetectorRef
+    ) {}
 
     openModal() {
         const modalOptions: NativeDialogConfig = {
@@ -32,6 +34,7 @@ export class PresidentComponent {
         const ref = this.modal.open(PresidentModalComponent, modalOptions);
 
         ref.afterClosed().subscribe( (result) => {
-            console.log(result);
+            this.president.isSeen = result;
+            this.changeDetectorRef.markForCheck();
         });
     }}

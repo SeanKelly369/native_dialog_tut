@@ -19,13 +19,18 @@
 }
 
 .section-title {
-    margin-top: 8;
+    margin-top: 4;
     font-weight: bold;
     margin-bottom: 4;
 }
 
-.achievement-text {
-    text-align: center;
+.achievement-bullet {
     horizontal-align: center;
-    margin: 3 0;
+    vertical-align: top;
+}
+
+.achievement-text {
+    text-align: left;
+    horizontal-align: center;
+    margin: 3 0 3 5;
 }
