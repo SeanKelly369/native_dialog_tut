@@ -20,21 +20,21 @@ export class PresidentComponent {
         private readonly changeDetectorRef: ChangeDetectorRef
     ) {}
 
-    openModal() {
+    openModal(): void {
         const modalOptions: NativeDialogConfig = {
             data: this.president,
             nativeOptions: {
                 fullscreen: false,
                 animated: false,
                 ios: {
-                    presentationStyle: UIModalPresentationStyle.Custom
+                    presentationStyle: UIModalPresentationStyle.OverCurrentContext
                 }
             }
         };
         const ref = this.modal.open(PresidentModalComponent, modalOptions);
 
-        ref.afterClosed().subscribe( (result) => {
-            this.president.isSeen = result;
+        ref.afterClosed().subscribe( (isSeen: boolean) => {
+            this.president.isSeen = isSeen;
             this.changeDetectorRef.markForCheck();
         });
     }}

@@ -1,13 +1,13 @@
 <GridLayout class="modal-root">
     <GridLayout *ngIf="isIos" class="modal-outer-area" (tap)="close()"></GridLayout>
 
-    <GridLayout #container class="modal-container"
+    <GridLayout class="modal-container"
                 rows="auto auto auto auto auto auto auto"
                 ios:width="80%" android:width="90%"
                 horizontalAlignment="center"
                 verticalAlignment="center"
                 padding="20"
-                borderRadius="16">
+                borderRadius="8">
 
         <!-- Header -->
         <StackLayout row="0" class="modal-header" marginBottom="8">
